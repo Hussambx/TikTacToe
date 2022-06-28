@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
+    <script src="script.js" defer></script>
     <title>Tic Tac Toe</title>
 </head>
 <body>
@@ -12,9 +13,28 @@
     <div id="start">
         <div>
             <h2>Game Mode:</h2>
-            <button>2 Players</button>
-            <button>1 Player</button>
+            <button onclick="gamemode(0)">2 Players</button>
+            <button onclick="gamemode(1)">1 Player</button>
         </div>
+
+
+    </div>
+    <h2 class="turn">Player One Turn</h2>
+
+    <div id="main">
+        <div id="gameboard">
+        <button onclick="play(0)"></button>
+        <button onclick="play(1)"></button>
+        <button onclick="play(2)"></button>
+        <button onclick="play(3)"></button>
+        <button onclick="play(4)"></button>
+        <button onclick="play(5)"></button>
+        <button onclick="play(6)"></button>
+        <button onclick="play(7)"></button>
+        <button onclick="play(8)"></button>
+        </div>
+
+
 
 
     </div>
