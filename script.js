@@ -45,10 +45,10 @@ function conditions(symbol){
             alert("4K");
             }
     }
-
-
-
-
-
+    for(let ay=0; ay<=3;ay=ay+1){
+        if(document.getElementById(ay).innerText==symbol && document.getElementById(ay+3).innerText==symbol && document.getElementById(ay+6).innerText==symbol){
+            alert("4K");
+            }
+    }
 
 }
