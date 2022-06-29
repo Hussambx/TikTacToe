@@ -45,10 +45,16 @@ function conditions(symbol){
             alert("4K");
             }
     }
-    for(let ay=0; ay<=3;ay=ay+1){
+    for(let ay=0; ay<=2;ay=ay+1){
         if(document.getElementById(ay).innerText==symbol && document.getElementById(ay+3).innerText==symbol && document.getElementById(ay+6).innerText==symbol){
             alert("4K");
             }
     }
+
+    if(document.getElementById(0).innerText==symbol && document.getElementById(4).innerText==symbol && document.getElementById(8).innerText==symbol){
+        alert("4K");
+        }else if(document.getElementById(2).innerText==symbol && document.getElementById(4).innerText==symbol && document.getElementById(6).innerText==symbol){
+            alert("4K");
+        }
 
 }
