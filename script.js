@@ -1,6 +1,7 @@
 let player = 1;
 let turns = 0;
 let gameover = false;
+let winner = "";
 const modeui = document.getElementById("start");
 const board = document.getElementById("main");
 function gamemode(type){
@@ -96,4 +97,19 @@ function end(symbol){
         }
        
     }
+}
+
+
+function again(){
+    for(let a =0; a<9; a++){
+        document.getElementById(a).innerText ="";
+        document.getElementById(a).style.backgroundColor ="grey";
+    }
+    if(player==2){
+        document.getElementById("turn").innerText="Player 2 Turn";
+    }else{
+        document.getElementById("turn").innerText="Player 1 Turn";
+    }
+    gameover = false;
+    turns = 0;
 }
