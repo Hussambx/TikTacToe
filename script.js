@@ -2,6 +2,9 @@ let player = 1;
 let turns = 0;
 let gameover = false;
 let winner = "";
+let p1win = 0;
+let p2win = 0;
+
 const modeui = document.getElementById("start");
 const board = document.getElementById("main");
 function gamemode(type){
@@ -82,9 +85,13 @@ function conditions(symbol){
 
 function end(symbol){
     if(symbol=="X"){
+        p1win++;
         document.getElementById("turn").innerText = "PLAYER 1 WINS!"
+        document.getElementById("p1win").innerText = p1win;
     }else if(symbol=="O"){
+        p2win++;
         document.getElementById("turn").innerText ="PLAYER 2 WINS!"
+        document.getElementById("p2win").innerText = p2win;
     }else{
         document.getElementById("turn").innerText="TIE GAME!"
     }
@@ -97,6 +104,7 @@ function end(symbol){
         }
        
     }
+    document.getElementById("playagain").style.display = "block";
 }
 
 
@@ -112,4 +120,5 @@ function again(){
     }
     gameover = false;
     turns = 0;
+    document.getElementById("playagain").style.display = "none";
 }
