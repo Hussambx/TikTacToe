@@ -42,7 +42,7 @@ h3{
     justify-content: center;
     margin-top: 2%;
     flex-wrap: wrap;
-
+     
 }
 
 #gameboard{
@@ -62,6 +62,7 @@ h3{
     margin-top: 0;
     border-style: none;
     border-radius: 9px;
+    font-size: 80px;
 }
 #gameboard>button:hover{
     background-color: rgb(161, 160, 160);
@@ -69,8 +70,23 @@ h3{
    
 }
 
-    #main>div{
-        width: 400px;
-        height:400px;
-        
-    }
+#main>div{
+    width: 400px;
+    height:400px;
+    
+}  
+    
+#playagain{
+    justify-content: center;
+    text-align: center;
+    margin-top: 5px;
+}   
+#playagain>button{
+    width: 200px;
+    height: 25px;
+    border-radius: 9px;
+    border-style: double;
+    font-size: large;
+    background-color: red;
+    color: white;
+}
