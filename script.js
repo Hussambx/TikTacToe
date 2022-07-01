@@ -22,20 +22,19 @@ function play(cord){
         }
     //Switchs Turns After This 
     if(player==1){
-        conditions("X");
         player=2;
         document.getElementById("turn").innerHTML = "Player 2 Turn"
+        conditions("X");
         console.log(player);
     }else{
-        conditions("O")
         player=1;
         console.log(player);
         document.getElementById("turn").innerHTML = "Player 1 Turn"
+        conditions("O")
     }
   
     }
   
-    if(turns==9){}  
 
 }
 //If you want add so that the array thats correct gets a color change
@@ -46,7 +45,7 @@ function conditions(symbol){
             document.getElementById(ax).style.backgroundColor = "green";
             document.getElementById(ax+1).style.backgroundColor ="green";
             document.getElementById(ax+2).style.backgroundColor = "green";
-            end()
+            end(symbol)
             }
     }
     for(let ay=0; ay<=2;ay=ay+1){
@@ -56,7 +55,7 @@ function conditions(symbol){
             document.getElementById(ay).style.backgroundColor = "green";
             document.getElementById(ay+3).style.backgroundColor ="green";
             document.getElementById(ay+6).style.backgroundColor = "green";
-            end()
+            end(symbol)
             }
     }
 
@@ -65,19 +64,30 @@ function conditions(symbol){
         document.getElementById(0).style.backgroundColor = "green";
             document.getElementById(4).style.backgroundColor ="green";
             document.getElementById(8).style.backgroundColor = "green";
-            end()
+            end(symbol)
         }else if(document.getElementById(2).innerText==symbol && document.getElementById(4).innerText==symbol && document.getElementById(6).innerText==symbol){
             gameover = true;
             document.getElementById(2).style.backgroundColor = "green";
             document.getElementById(4).style.backgroundColor ="green";
             document.getElementById(6).style.backgroundColor = "green";
-            end()
+            end(symbol)
         }
 
+        if(gameover==false && turns==9){
+            end("a");
+        }
 }
 
 
-function end(){
+function end(symbol){
+    if(symbol=="X"){
+        document.getElementById("turn").innerText = "PLAYER 1 WINS!"
+    }else if(symbol=="O"){
+        document.getElementById("turn").innerText ="PLAYER 2 WINS!"
+    }else{
+        document.getElementById("turn").innerText="TIE GAME!"
+    }
+
     for(let h =0; h<9; h++){
         if(document.getElementById(h).style.backgroundColor=="green"){
 
