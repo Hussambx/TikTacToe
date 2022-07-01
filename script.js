@@ -46,7 +46,7 @@ function conditions(symbol){
             document.getElementById(ax).style.backgroundColor = "green";
             document.getElementById(ax+1).style.backgroundColor ="green";
             document.getElementById(ax+2).style.backgroundColor = "green";
-            
+            end()
             }
     }
     for(let ay=0; ay<=2;ay=ay+1){
@@ -56,7 +56,7 @@ function conditions(symbol){
             document.getElementById(ay).style.backgroundColor = "green";
             document.getElementById(ay+3).style.backgroundColor ="green";
             document.getElementById(ay+6).style.backgroundColor = "green";
-            
+            end()
             }
     }
 
@@ -65,15 +65,25 @@ function conditions(symbol){
         document.getElementById(0).style.backgroundColor = "green";
             document.getElementById(4).style.backgroundColor ="green";
             document.getElementById(8).style.backgroundColor = "green";
-           
+            end()
         }else if(document.getElementById(2).innerText==symbol && document.getElementById(4).innerText==symbol && document.getElementById(6).innerText==symbol){
             gameover = true;
             document.getElementById(2).style.backgroundColor = "green";
             document.getElementById(4).style.backgroundColor ="green";
             document.getElementById(6).style.backgroundColor = "green";
-           
+            end()
         }
 
 }
 
 
+function end(){
+    for(let h =0; h<9; h++){
+        if(document.getElementById(h).style.backgroundColor=="green"){
+
+        }else{
+            document.getElementById(h).style.backgroundColor="red";
+        }
+       
+    }
+}
