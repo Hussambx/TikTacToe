@@ -122,3 +122,14 @@ function again(){
     turns = 0;
     document.getElementById("playagain").style.display = "none";
 }
+
+
+function change(){
+    again()
+p1win =0;
+p2win = 0;
+modeui.style.display = "flex";
+    board.style.display = "none";
+    document.getElementById("p1win").innerText = p1win;
+    document.getElementById("p2win").innerText = p2win;
+}
